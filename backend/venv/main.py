@@ -5,7 +5,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000","https://nextjs-fastapi-8kvrmam3r-vivagarwals-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -18,3 +18,4 @@ async def root():
 @app.get("/api/hello")
 async def read_root():
     return {"message": "Hello from FastAPI!"}
+

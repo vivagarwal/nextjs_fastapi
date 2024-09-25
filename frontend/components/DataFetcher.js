@@ -5,6 +5,7 @@ export default function DataFetcher() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
+    console.log('Fetching from:', process.env.NEXT_PUBLIC_API_URL);
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hello`)
       .then((res) => res.json())
       .then((data) => setData(data))
